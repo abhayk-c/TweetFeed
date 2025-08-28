@@ -16,11 +16,7 @@ public class UserProfileViewController: UIViewController {
     private var relationshipActionButton = UIButton()
     private var blockStatusLabel = UILabel()
     
-    private let profileView: TweetFeedCardView = {
-        let view = TweetFeedCardView()
-        view.useAutoLayout = true
-        return view
-    }()
+    private var profileView = TweetFeedCardView()
     
     private var relationshipIntent: RelationshipUpdateIntent = .follow
     private let relationshipService = RelationshipService()
